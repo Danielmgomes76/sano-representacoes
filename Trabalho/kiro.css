@@ -1,0 +1,130 @@
+/* ====================================================================
+   9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
+   ==================================================================== */
+
+/* Estilo do Header Secundário (apenas logo e botão de voltar) */
+.header-secundario {
+    background-color: var(--light-bg);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-secundario .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-pequena {
+    width: 250px; /* Logo menor no header secundário */
+    height: auto;
+}
+
+/* Estilo do Botão de Voltar */
+.back-button {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilo da Seção de Detalhes da Marca */
+.marca-detalhe {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.marca-logo {
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+.intro-marca {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Tags de Destaque do Produto */
+.destaques-linha {
+    margin-bottom: 40px;
+    
+    
+}
+
+.tag-produto {
+    display: inline-block;
+    background-color: #e0f2f1; /* Cor de fundo suave */
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+/* Layout da Lista de Produtos (Grid) */
+/* --- ESTILO PARA A LISTA DE PRODUTOS --- */
+
+.produto-lista {
+  display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
+  flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
+  gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
+}
+
+/* --- ESTILO PARA A LISTA DE PRODUTOS (CORRIGIDO) --- */
+
+.produto-lista {
+display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
+flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
+gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
+}
+
+.produto-item {
+/* Define que cada item deve ocupar um terço do espaço disponível,
+    DESCONTANDO o valor fixo dos dois gaps (20px + 20px = 40px).
+    Isso garante que os três itens caibam perfeitamente na mesma linha.
+  */
+flex-basis: calc((100% - 40px) / 3); 
+
+/* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
+box-sizing: border-box; 
+}
+
+.produto-img {
+/* Ocupa 100% da largura do seu box (que agora foi calculado corretamente) */
+width: 60%;
+/* ALTURA FIXA: Esta linha define o tamanho que todas as imagens terão */
+height: 250px; 
+/* PREENCHIMENTO: Faz a imagem cobrir todo o espaço de 250px, mantendo o aspecto, mas cortando as bordas se necessário. */
+object-fit: cover; 
+border-radius: 5px;
+margin-bottom: 15px;
+}
+
+.produto-item h4 {
+font-size: 25px;
+color: var(--dark-text);
+margin-bottom: 5px;
+}
+
+.produto-item p {
+font-size: 15px;
+color: #777;
+}
+/* Responsividade adicional para a nova página */
+@media (max-width: 600px) {
+    .header-secundario .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

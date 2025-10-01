@@ -1,0 +1,341 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================================================== */
+
+/* Definindo a paleta de cores para fácil manutenção */
+:root {
+    --cor-primaria: #2E7D32; /* Verde escuro para botões e destaques */
+    --cor-secundaria: #002B49; /* Azul marinho para títulos */
+    --cor-fundo: white; /* Branco */
+    --cor-fundo-secao: #F7F9FA; /* Cinza claro para alternar seções */
+    --cor-texto: #333333; /* Cinza escuro para texto geral */
+    --cor-texto-claro: #FFFFFF;
+}
+
+/* Reset básico e configurações do corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links do menu */
+    scroll-padding-top: 120px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-secundaria);
+}
+
+h1, h2, h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (Layout Centralizado e Compacto)
+   ========================================================================== */
+
+   header .logo, header a.logo {
+    color: var(--cor-secundaria); /*Cor do sano representações acima do  menu */
+    font-size:xx-large;            /* Aumenta o tamanho para dar destaque (ajuste se precisar) */
+    font-weight: 700;             /* Deixa o texto em negrito */
+    text-decoration: none;        /* Remove qualquer sublinhado de link */
+}
+header {
+    background-color: var(--cor-fundo);
+    /* Define a altura das margens superior/inferior de todo o cabeçalho */
+    padding: 15px 0px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens um sobre o outro */
+    align-items: center;   /* O mais importante: Centraliza tudo horizontalmente */
+    
+    /* Controle aqui a distância exata entre o logo e o menu */
+    gap: 8px;
+}
+
+.logo {
+
+    height: 60px; /* Mantém um tamanho de logo razoável */
+    width: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Espaço entre os links "Home", "Sobre", etc. */
+}
+
+header nav a {
+    color: var(--cor-texto);
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-primaria);
+    border-bottom-color: var(--cor-primaria);
+}
+
+/* ==========================================================================
+   3. SEÇÃO HOME (HERO)
+   ========================================================================== */
+
+.hero {
+    background-color: var(--cor-fundo-secao);
+    text-align: center;
+    padding: 200px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #256a28; /* Verde um pouco mais escuro */
+    color: var(--cor-texto-claro);
+    transform: translateY(-3px);
+}
+
+.credibilidade {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.credibilidade-item {
+    text-align: center;
+}
+
+.credibilidade-item strong {
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    display: block;
+}
+
+
+/* ==========================================================================
+   4. SEÇÃO SOBRE NÓS
+   ========================================================================== */
+#sobre {
+    background-color: var(--cor-fundo);
+}
+#sobre h2 {
+    margin-bottom: 20px;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.sobre-conteudo article {
+    padding: 20px;
+}
+
+.sobre-conteudo h3 {
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   5. SEÇÃO PORTFÓLIO
+   ========================================================================== */
+#portfolio {
+    background-color: var(--cor-fundo-secao);
+}
+
+#portfolio p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.marca-card {
+    background-color: var(--cor-fundo);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marca-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    color: var(--cor-texto);
+}
+
+.marca-card img {
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 20px auto;
+}
+
+.marca-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   6. SEÇÃO CONTATO
+   ========================================================================== */
+.contato-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contato-info p {
+    margin-bottom: 15px;
+}
+
+.contato-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contato-form button, .whatsapp-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.whatsapp-button {
+    width: auto;
+    margin-top: 10px;
+}
+
+.contato-form button:hover, .whatsapp-button:hover {
+    background-color: #256a28;
+    color: var(--cor-texto-claro);
+}
+
+/* ==========================================================================
+   7. RODAPÉ
+   ========================================================================== */
+footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* ==========================================================================
+   8. MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .hero h1 { font-size: 2.2rem; }
+    
+    /* Ajustes no menu (exemplo simples, um menu hamburguer real precisaria de JS) */
+    header nav {
+        display: none; /* Em um projeto real, aqui entraria o menu hamburguer */
+    }
+
+    .sobre-conteudo,
+    .contato-wrapper {
+        grid-template-columns: 1fr; /* Transforma em coluna única */
+    }
+
+    .credibilidade {
+        flex-direction: column; /* Itens um abaixo do outro */
+        gap: 20px;
+    }
+}
