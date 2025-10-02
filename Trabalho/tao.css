@@ -1,3 +1,14 @@
+/* Centraliza o botão de solicitar tabela de preços */
+.tabela-preco-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* Reduz o tamanho do h2 apenas dentro do container */
+.container h2 {
+    font-size: 1.45rem;
+    font-weight: normal;
+}
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
    ==================================================================== */
@@ -38,25 +49,27 @@
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 30px 0 20px 0;
+    padding: 20px 0 90px 0;
     text-align: center;
 }
 
 .marca-logo {
-    max-width: 300px;
-    margin-bottom: 30px;
+    max-width: 500px;
+    margin-bottom: 15px;
 }
 
 .intro-marca {
     max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 25px;
+    margin: 30px auto 20px auto;
+    font-size: 18px;
     color: #555;
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
     margin-bottom: 40px;
+    
+    
 }
 
 .tag-produto {

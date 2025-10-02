@@ -1,3 +1,14 @@
+/* Centraliza o botão de solicitar tabela de preços */
+.tabela-preco-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* Reduz o tamanho do h2 apenas dentro do container */
+.container h2 {
+    font-size: 1.45rem;
+    font-weight: normal;
+}
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
    ==================================================================== */
@@ -50,7 +61,7 @@
 .intro-marca {
     max-width: 800px;
     margin: 0 auto 20px;
-    font-size: 18px;
+    font-size: 15px;
     color: #555;
 }
 
