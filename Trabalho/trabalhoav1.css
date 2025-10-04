@@ -8,7 +8,7 @@ html {
 :root {
     --cor-primaria: #2E7D32; /* Verde escuro para botões e destaques */
     --cor-secundaria: #002B49; /* Azul marinho para títulos */
-    --cor-fundo: white; /* Branco */
+    --cor-fundo: white; /* Fundo Branco */
     --cor-fundo-secao: #F7F9FA; /* Cinza claro para alternar seções */
     --cor-texto: #333333; /* Cinza escuro para texto geral */
     --cor-texto-claro: #FFFFFF;
@@ -16,54 +16,55 @@ html {
 
 /* Reset básico e configurações do corpo */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;/* Remove margens padrão */
+    padding: 0;/* Remove espaçamentos padrão */
+    box-sizing: border-box;/* Inclui padding e border na largura e altura totais dos elementos */
 
 }
 
 html {
     scroll-behavior: smooth; /* Rolagem suave ao clicar nos links do menu */
-    scroll-padding-top: 120px;
+    scroll-padding-top: 120px;/*Adiciona 120px de espaço no topo ao rolar até uma seção da página*/
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;/* Define a fonte principal do texto da página como Poppins" se ela não estiver disponível, usa uma fonte genérica sem serifa (sans-serif) */
+    background-color: var(--cor-fundo); /*Cor fundo do site*/
+    color: var(--cor-texto); /*Define a cor padrão do corpo da página*/
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1100px;/* Largura máxima do conteúdo */
+    margin: 0 auto;/* Centraliza o container horizontalmente */
+    margin-top: -80px;/* Ajuste para sobrepor o header */
+    padding: 0 20px;/* Espaçamento interno nas laterais */
 }
 
 a {
-    color: var(--cor-primaria);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--cor-primaria);/* Cor dos links */
+    text-decoration: none;/* Remove o sublinhado padrão dos links */
+    transition: color 0.3s ease;/* Transição suave na mudança de cor ao passar o mouse */
 }
 
 a:hover {
-    color: var(--cor-secundaria);
+    color: var(--cor-secundaria);/* Cor dos links ao passar o mouse */
 }
 
 h1, h2, h3 {
-    color: var(--cor-secundaria);
-    margin-bottom: 20px;
-    font-weight: 600;
+    color: var(--cor-secundaria);/* Cor dos títulos */
+    margin-bottom: 20px;/* Espaçamento abaixo dos títulos */
+    font-weight: 600;/* Deixa os títulos em negrito */
 }
 
 h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 2.5rem;/* Tamanho do título secundário */
+    text-align: center;/* Centraliza os títulos h2 */
+    margin-bottom: 40px;/* Espaçamento maior abaixo dos títulos h2 */
 }
 
 section {
-    padding: 80px 0;
+    padding: 80px 0;/* Espaçamento vertical entre as seções */
 }
 
 /* ==========================================================================
@@ -80,28 +81,27 @@ section {
     text-decoration: none;        /* Remove qualquer sublinhado de link */
 }
 header {
-    background-color: var(--cor-fundo);
-    /* Define a altura das margens superior/inferior de todo o cabeçalho */
-    padding: 10px 0px;
-    border-bottom: 1px solid #eee;
+    background-color: var(--cor-fundo);/* Cor de fundo do cabeçalho */
+    padding: 5px 0px;/* Espaçamento interno do cabeçalho */
+    border-bottom: 1px solid #eee;/* Linha sutil abaixo do cabeçalho */
     position: sticky; /*Faz cabeçalho grudar no topo da página*/
     top: 0; /* Define a posição inicial para o sticky: o cabeçalho fica fixo a partir do topo (0px de distância). */
-    z-index: 1000;
+    z-index: 1000;/* Garante que o cabeçalho fique acima de outros elementos da página */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 header .container {
-    display: flex;
-    flex-direction: column; /* Coloca os itens um sobre o outro */
-    align-items: center;   /* O mais importante: Centraliza tudo horizontalmente */
+    display: flex;/* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha itens em coluna (logo em cima, menu embaixo) */
+    align-items: center;/* O mais importante: Centraliza tudo horizontalmente */
+    gap: 8px;/* Espaçamento entre logo e menu */
+    justify-content: space-between;/* Espaço entre logo e menu */
     
-    /* Controle aqui a distância exata entre o logo e o menu */
-    gap: 8px;
 }
 
 .logo {
 
-    height: 60px; /* Mantém um tamanho de logo razoável */
+    height: 80px; /* Mantém um tamanho de logo razoável */
     width: auto;
 }
 
@@ -128,20 +128,22 @@ header nav a:hover {
    3. SEÇÃO HOME (HERO)
    ========================================================================== */
 
-.hero {
+.introducao {
     background-color: var(--cor-fundo-secao);
     text-align: center;
-    padding: 80px 0 60px 0;
+    padding: 120px 60px ;
+   
+   
 }
 
-.hero h1 {
+.introducao h1 {
     font-size: 3rem;
     line-height: 1.2;
 }
 
-.hero p {
+.introducao p {
     font-size: 1.1rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -151,24 +153,24 @@ header nav a:hover {
     display: inline-block;
     background-color: var(--cor-primaria);
     color: var(--cor-texto-claro);
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 1rem;
+    padding: 25px 30px;/* Espaçamento interno do botão */
+    border-radius: 8px;/* Bordas arredondadas */
+    font-weight: 600;/* Deixa o texto em negrito */
+    font-size: 1rem;/* Tamanho da fonte */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #256a28; /* Verde um pouco mais escuro */
-    color: var(--cor-texto-claro);
-    transform: translateY(-3px);
+    color: var(--cor-texto-claro);/* Mantém o texto claro */
+    transform: translateY(-3px);/* Leve elevação ao passar o mouse */
 }
 
 .credibilidade {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
+    display: flex;/* Usa Flexbox para layout */
+    justify-content: center;/* Centraliza os itens horizontalmente */
+    gap: 40px;/* Espaçamento entre os itens */
+    margin-top: 40px;/* Espaçamento acima da seção de credibilidade */
 }
 
 .credibilidade-item {
@@ -187,24 +189,45 @@ header nav a:hover {
    ========================================================================== */
 #sobre {
     background-color: var(--cor-fundo);
+    padding-top: -120px;
 }
 #sobre h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;/* Reduz o espaçamento abaixo do título */
 }
 
 .sobre-conteudo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    text-align: center;
+    display: grid;/* Usa Grid para layout */
+    grid-template-columns: repeat(3, 1fr);/* Três colunas de largura igual */
+    gap: 5px;/* Espaçamento entre os artigos */
+    text-align: justify;/* Centraliza o texto dentro dos artigos */
+    
 }
 
 .sobre-conteudo article {
-    padding: 20px;
+    padding: 40px;
 }
 
 .sobre-conteudo h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem;/* Tamanho do subtítulo */
+    text-align: center;/* Centraliza o subtítulo */
+}
+.observacao p{
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 40px;
+    color: white ;/* Cor do texto */
+    font-weight: 400; /* Adicione esta linha */
+    padding: 10px 10px; /* Adicione esta linha */
+    border-radius: 10px; /* Adicione esta linha */
+}
+.cabecalho.sobre h3{
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 40px;
+    color: white ;/* Cor do texto */
+    font-weight: 400; /* Adicione esta linha */
+    padding: 5px 10px; /* Adicione esta linha */
+    border-radius: 10px; /* Adicione esta linha */
 }
 
 /* ==========================================================================
@@ -306,6 +329,15 @@ header nav a:hover {
 .contato-form button:hover, .whatsapp-button:hover {
     background-color: #256a28;
     color: var(--cor-texto-claro);
+}
+.contato-info h3{
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 40px;
+    color: white ;/* Cor do texto */
+    font-weight: 400; /* Adicione esta linha */
+    padding: 5px 10px; /* Adicione esta linha */
+    border-radius: 10px; /* Adicione esta linha */
 }
 
 /* ==========================================================================
