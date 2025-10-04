@@ -336,7 +336,7 @@ header nav a:hover {
     margin-bottom: 40px;
     color: white ;/* Cor do texto */
     font-weight: 400; /* Adicione esta linha */
-    padding: 5px 10px; /* Adicione esta linha */
+    padding: 10px 10px; /* Adicione esta linha */
     border-radius: 10px; /* Adicione esta linha */
 }
 
@@ -346,12 +346,17 @@ header nav a:hover {
    7. RODAPÉ
    ========================================================================== */
 footer {
-    background-color: var(--cor-secundaria);
+    background-color:#002B49;
     text-align: center;
-    padding: 30px 20px;
+    padding: 5px 5px;
     font-size: 0.9rem;
-    color: #777;
+    color: rgb(234, 224, 224);
     border-top: 1px solid #eee;
+}
+.direitos_autorais {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(234, 224, 224);
 }
 
 /* ==========================================================================
