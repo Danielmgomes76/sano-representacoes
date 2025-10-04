@@ -1,7 +1,9 @@
 /* ==========================================================================
    1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
    ========================================================================== */
-
+html {
+  scroll-padding-top: 60px; /* ajuste conforme a altura do seu header */
+}
 /* Definindo a paleta de cores para fácil manutenção */
 :root {
     --cor-primaria: #2E7D32; /* Verde escuro para botões e destaques */
@@ -80,10 +82,10 @@ section {
 header {
     background-color: var(--cor-fundo);
     /* Define a altura das margens superior/inferior de todo o cabeçalho */
-    padding: 15px 0px;
+    padding: 10px 0px;
     border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
+    position: sticky; /*Faz cabeçalho grudar no topo da página*/
+    top: 0; /* Define a posição inicial para o sticky: o cabeçalho fica fixo a partir do topo (0px de distância). */
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }

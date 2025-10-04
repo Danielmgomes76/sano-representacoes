@@ -1,3 +1,23 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================================================== */
+html {
+  scroll-padding-top: 60px; /* ajuste conforme a altura do seu header */
+}
+.tabela-preco-center .cta-button {
+    font-size: 1.25rem;
+}
+/* Centraliza o botão de solicitar tabela de preços */
+.tabela-preco-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* Reduz o tamanho do h2 apenas dentro do container */
+.container h2 {
+    font-size: 1.45rem;
+    font-weight: normal;
+}
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
    ==================================================================== */
@@ -38,34 +58,49 @@
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 20px 0 10px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
 .marca-logo {
-    max-width: 200px;
-    margin-bottom: 30px;
+    width: auto;/*Largura ajusta se automaticamente*/
+    display: block;/*faz o elemento se comportar como bloco*/
+    max-width: 250px; /* define um limite máximo de largura */
+    height: auto;/*ajusta a altura proporcional automaticamente*/
+    margin: -40px auto 10px; /* Aplica margem: -20px no topo (faz a logo “subir” um pouco), auto nas laterais (centraliza horizontalmente), 15px embaixo (afasta do próximo elemento) */
+}
+
+@media (max-width: 600px) {
+    .marca-logo {
+        max-width: 180px; /* logo menor em telas pequenas */
+        margin: -10px auto 12px;
+    }
 }
 
 .intro-marca {
     max-width: 800px;
-    margin: 0 auto 70px;
-    font-size: 18px;
+    margin: 0 auto 20px;
+    font-size: 20px;
     color: #555;
+    text-align: justify;
+    font-weight:bolder
+    color rgb(99, 86, 86);
+    font-style: inherit;
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-bottom: 40px;
+    margin-bottom: 60px; 
+    
 }
 
 .tag-produto {
     display: inline-block;
     background-color: #e0f2f1; /* Cor de fundo suave */
     color: var(--primary-color);
-    padding: 8px 15px;
+    padding: 12px 20px;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     margin: 5px;
 }
@@ -89,7 +124,7 @@
 }
 
 .produto-img {
-    max-width: 80%;
+    width: 90%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;

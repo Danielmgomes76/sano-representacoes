@@ -1,3 +1,23 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================================================== */
+html {
+  scroll-padding-top: 60px; /* ajuste conforme a altura do seu header */
+}
+.tabela-preco-center .cta-button {
+    font-size: 1.25rem;
+}
+/* Centraliza o botão de solicitar tabela de preços */
+.tabela-preco-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* Reduz o tamanho do h2 apenas dentro do container */
+.container h2 {
+    font-size: 1.45rem;
+    font-weight: normal;
+}
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
    ==================================================================== */
@@ -38,17 +58,17 @@
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 30px 0 20px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
 .marca-logo {
-    max-width: 500px;
-    margin-bottom: 30px;
+    max-width: 800px;
+    margin-bottom: 5px;
 }
 
 .intro-marca {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 20px;
     font-size: 20px;
     color: #555;
@@ -57,6 +77,8 @@
 /* Tags de Destaque do Produto */
 .destaques-linha {
     margin-bottom: 40px;
+    
+    
 }
 
 .tag-produto {
@@ -89,7 +111,7 @@
 }
 
 .produto-img {
-    max-width: 80%;
+    max-width: 60%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
