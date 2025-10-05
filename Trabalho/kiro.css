@@ -6,21 +6,36 @@ html {
    AJUSTES GERAIS E BOTÕES
    ==================================================================== */
 
-.logo_ManoVelho {
+* ----------------------
+   Logo Kiro centralizada
+   ---------------------- */
+.logo_kiro {
+    position: absolute;         /* posiciona acima do conteúdo */
+    top: -90px;                 /* ajuste vertical da logo no desktop */
+    left: 50%;                  /* centraliza horizontal */
+    transform: translateX(-50%);
+    z-index: 9999;              /* garante que fique acima de tudo */
     text-align: center;
-    margin-bottom: 20px;
-
-    /* Aumentei o valor para subir mais */
-    transform: translateY(-120px); /* ajuste para -140px, -160px se quiser subir mais */
-    position: relative; /* necessário para top/transform e z-index */
-    z-index: 999; /* garante que fique acima do header */
-    transition: transform 0.25s ease;
+    margin: 0;
 }
 
-/* Ajuste responsivo para telas pequenas */
+.logo_kiro .marca-logo {
+    display: block;
+    max-width: 250px;           /* largura máxima no desktop */
+    width: auto;
+    height: auto;
+}
+
+/* ----------------------
+   Ajustes para mobile
+   ---------------------- */
 @media (max-width: 600px) {
-    .logo_ManoVelho {
-        transform: translateY(-40px); /* menos deslocamento no mobile */
+    .logo_kiro {
+        top: -40px;            /* menor deslocamento no mobile */
+    }
+    .logo_kiro .marca-logo {
+        max-width: 140px;      /* reduz tamanho da imagem no celular */
+        height: auto;
     }
 }
 
@@ -30,7 +45,6 @@ html {
     font-weight: normal;
 }
 
-/* Estilo para o Botão de Solicitação de Preço */
 .cta-button {
     background-color: #002B49;
     color: white; /* Cor branca para o texto */
@@ -64,6 +78,7 @@ html {
     border-bottom: 2px solid var(--primary-color);
 }
 
+
 .header-secundario .container {
     display: flex;
     justify-content: space-between;
@@ -73,6 +88,7 @@ html {
 .logo-pequena {
     width: 250px; 
     height: auto;
+    margin-right: 20px;
 }
 
 /* Estilo do Botão de Voltar */
@@ -81,6 +97,7 @@ html {
     font-weight: 600;
     color: var(--primary-color);
     padding: 8px 15px;
+    margin-left:10px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     text-decoration: none; /* Remove o sublinhado */
@@ -94,11 +111,14 @@ html {
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    /* Reduz o padding superior para permitir que a logo suba (de 60px para 20px) */
+    position: relative; 
+    /* Removido o overflow: visible; pois position: relative já deve resolver */
+    
+    /* Demais estilos... */
     padding: 20px 0 60px 0; 
     text-align: center;
-    left: 50px;
-    top: -50px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 40px;
 }
 
@@ -108,7 +128,7 @@ html {
 }
 
 .intro-marca {
-    max-width: 800px;
+    max-width: 700px;
     margin: 20px auto 20px;
     font-size: 20px;
     color: #555;
@@ -164,26 +184,11 @@ html {
     display: flex;
     flex-direction: column;/* empilha verticalmente imagem, título e texto */
     align-items: center; /* <-- centraliza horizontalmente imagem, título e texto */
-    flex-basis: 32%; /* Define que cada item deve tentar ocupar 32% da largura do container. */
+    flex-basis: 32%;/* Define que cada item deve tentar ocupar 32% da largura do container. */
     box-sizing: border-box;/* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
-    padding: 8px; /* Adiciona padding interno ao card para visual */
-    text-align: center; /* centraliza o texto */
-}
-
-/* reduz espaço entre imagem, título e parágrafo dentro de cada produto */
-.produto-item .produto-img {
-    display: block;
-    margin: 0 auto 8px; /* controla espaço abaixo da imagem (reduce) */
-}
-
-.produto-item h4 {
-    margin: 4px 0 6px; /* reduz margin-top do título */
-    line-height: 1.15;
-}
-
-.produto-item p {
-    margin: 0 0 12px; /* reduz margin-top do parágrafo */
-    line-height: 1.4;
+    padding: 10px;/* Adiciona padding interno ao card para visual */
+    text-align: center;/* centraliza o texto */
+   
 }
 
 .produto-img {
@@ -212,21 +217,13 @@ html {
    
 }
 footer {
-    /* CORRIGIDO: Deve ser 'display: flex' */
+    
     display: flex;
-    /* ESSENCIAL: Centraliza o conteúdo verticalmente (por altura) */
-    align-items: center; 
-    /* Centraliza o conteúdo horizontalmente */
     justify-content: center;
-    
     background-color:#002B49;
-    
-    /* REMOVIDO: text-align: center; (Redundante com justify-content: center) */
-    /* REMOVIDO: margin: 10px; (Pode causar deslocamento) */
-    
-    padding: 20px 0; /* Cria a altura para a centralização ser percebida */
-    
-    /* CORRIGIDO: Deve usar ponto, não vírgula */
+    padding:10px 10px; /* Cria a altura para a centralização ser percebida */
+    margin-right: -50px;
+    margin-bottom: -15px;
     font-size: 1.1rem; 
     color: rgb(234, 224, 224);
     border-top: 1px solid #eee;
@@ -244,33 +241,44 @@ footer {
     font-size: 1.1rem; 
     color: rgb(234, 224, 224);
 }
-
-/* evitar que pais cortem o deslocamento */
-.marca-detalhe,
+/* ----------------------
+   Logo Kiro centralizada
+   ---------------------- */
 .marca-detalhe .container {
-  overflow: visible !important;
+    /* Define o container interno como o ponto de referência para a logo */
+    position: relative; 
+    /* Coloque padding-top aqui, se necessário, para empurrar o conteúdo p/ baixo */
+    padding-top: 150px; /* Este padding garante que o conteúdo não comece no topo, liberando espaço */
 }
 
+   
 /* mover o bloco que contém a logo */
-.logo_ManoVelho {
-  position: relative !important;
-  transform: translateY(-180px) !important; /* aumentar o valor para subir mais */
-  z-index: 9999 !important;
-  margin-bottom: 0 !important;
+.logo_kiro {
+   
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 30px; 
+    z-index: 999; 
+    margin-top: -80px;
+    position: absolute !important;
+    text-align: center; 
 }
 
 /* garantir proporção e centralização da imagem */
-.logo_ManoVelho .marca-logo {
-  display: block !important;
-  margin: 0 auto !important;
-  max-width: 250px; /* ajuste para o tamanho desejado */
-  height: auto !important;
+.logo_kiro .marca-logo {
+    display: block;/* garante que a imagem seja tratada como bloco */
+    max-width: 250px; /* largura máxima no desktop */
+    width: auto;/* Define a largura real da imagem no desktop */
+    height: auto;/* mantém a proporção da imagem */
+    max-width: 250px; /* ajuste o tamanho aqui (ex.: 200px, 300px) */
+    
 }
 
 /* diminuir deslocamento no mobile */
 @media (max-width: 600px) {
-  .logo_ManoVelho { transform: translateY(-40px) !important; }
-  .logo_ManoVelho .marca-logo { max-width: 140px; }
+  .logo_kiro { transform: translateY(-40px) !important; }
+  .logo_kiro .marca-logo { max-width: 140px; }
 }
 
 /* Responsividade adicional para a nova página */
@@ -286,33 +294,9 @@ footer {
     }
 }
 
-/* tornar o container referência para posicionamento absoluto */
 .marca-detalhe {
-  position: relative;       /* permite posicionar a logo por absolute */
-  overflow: visible !important;
+   
+    padding: 0 0 60px 0;/* Mantém o padding-bottom se quiser espaço no final */
 }
 
-/* posicionar a logo acima e centralizada */
-.logo_ManoVelho {
-  position: absolute !important;
-  top: -90px;               /* ajuste este valor para subir/baixar a logo */
-  left: 50%;
-  transform: translateX(-50%); /* centraliza horizontalmente */
-  z-index: 9999 !important;
-  margin: 0 !important;
-  text-align: center;
-}
 
-/* garantir proporção da imagem */
-.logo_ManoVelho .marca-logo {
-  display: block !important;
-  max-width: 250px; /* ajuste o tamanho aqui (ex.: 200px, 300px) */
-  width: auto;
-  height: auto !important;
-}
-
-/* ajustar no mobile */
-@media (max-width: 600px) {
-  .logo_ManoVelho { top: -40px !important; }
-  .logo_ManoVelho .marca-logo { max-width: 140px !important; }
-}
