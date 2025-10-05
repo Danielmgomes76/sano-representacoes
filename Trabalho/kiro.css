@@ -1,26 +1,63 @@
-
 html {
-  scroll-padding-top: 80px; /* ajuste conforme a altura do seu header */
+    scroll-padding-top: 60px; 
 }
-.tabela-preco-center .cta-button {
-    font-size: 1.25rem;
+
+/* ====================================================================
+   AJUSTES GERAIS E BOTÕES
+   ==================================================================== */
+
+.logo_ManoVelho {
+    text-align: center;
+    margin-bottom: 20px;
+
+    /* Aumentei o valor para subir mais */
+    transform: translateY(-120px); /* ajuste para -140px, -160px se quiser subir mais */
+    position: relative; /* necessário para top/transform e z-index */
+    z-index: 999; /* garante que fique acima do header */
+    transition: transform 0.25s ease;
 }
-/* Centraliza o botão de solicitar tabela de preços */
-.tabela-preco-center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+
+/* Ajuste responsivo para telas pequenas */
+@media (max-width: 600px) {
+    .logo_ManoVelho {
+        transform: translateY(-40px); /* menos deslocamento no mobile */
+    }
 }
-/* Reduz o tamanho do h2 apenas dentro do container */
+
+/* Reduz o tamanho do h2 apenas dentro do container (se houver h2) */
 .container h2 {
     font-size: 1.45rem;
-    font-weight: 700px;
+    font-weight: normal;
 }
+
+/* Estilo para o Botão de Solicitação de Preço */
+.cta-button {
+    background-color: #002B49;
+    color: white; /* Cor branca para o texto */
+    padding: 12px 25px;
+    font-size: 1.25rem; /* Fonte maior para destacar */
+    border: none;
+    border-radius: 10px;
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;
+    display: inline-block; /* Garante que o background se ajuste ao texto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+/* Centraliza o botão de solicitar tabela de preços de forma responsiva */
+.tabela-preco-center {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 40px 0; 
+}
+
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
    ==================================================================== */
 
-/* Estilo do Header Secundário (apenas logo e botão de voltar) */
+/* Estilo do Header Secundário */
 .header-secundario {
     background-color: var(--light-bg);
     padding: 15px 0;
@@ -34,7 +71,7 @@ html {
 }
 
 .logo-pequena {
-    width: 250px; /* Logo menor no header secundário */
+    width: 250px; 
     height: auto;
 }
 
@@ -46,6 +83,7 @@ html {
     padding: 8px 15px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
+    text-decoration: none; /* Remove o sublinhado */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -56,64 +94,36 @@ html {
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 90px 0;
+    /* Reduz o padding superior para permitir que a logo suba (de 60px para 20px) */
+    padding: 20px 0 60px 0; 
     text-align: center;
+    left: 50px;
+    top: -50px;
+    margin-bottom: 40px;
 }
 
-    /* ================================================================
-.   Como aumentar a logo (.marca-logo)
-.   --------------------------------------------------------------
-.   Dicas rápidas (PT-BR):
-   1) Ajuste direto: altere o valor de max-width.
-      Exemplo:
-        .marca-logo {
-          width: auto;
-          max-width: 600px;  (ex.: aumenta até 600px)
-          height: auto;
-          margin-bottom: 15px;
-        }
-
-   2) Responsividade: use width:100% + max-width para que a logo encolha em telas pequenas.
-      Exemplo:
-        .marca-logo { width: 100%; max-width: 600px; height: auto; }
-
-   3) Evitar distorção: não use porcentagens maiores que 100% em width (ex.: width:200%),
-      pois isso pode esticar a imagem. Use width: auto ou width:100% com max-width.
-
-   4) Conflitos / ordem de carregamento: se outra folha sobrescrever a regra,
-      torne o seletor mais específico ou use !important como último recurso:
-        .marca-detalhe .marca-logo { max-width: 600px !important; }
-
-   5) Cache do navegador: após editar o CSS, recarregue com Ctrl+F5 para forçar o novo arquivo.
-
-   Observação: mantenha height: auto para preservar a proporção da imagem.
-=================================================================*/
-
 .marca-logo {
-    width: auto; /* manter proporção */
-    max-width: 500px; /* reduzido para 400px */
-    height: auto;
-    margin-bottom: 15px;
+    max-width: 800px;
+    margin-bottom: 5px;
 }
 
 .intro-marca {
     max-width: 800px;
-    margin: 0 auto 20px;
-    font-size: 15px;
+    margin: 20px auto 20px;
+    font-size: 20px;
     color: #555;
+    text-align: justify;
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-bottom: 40px;
-    
-    
+    margin-bottom: 60px;
 }
 
 .tag-produto {
     display: inline-block;
-    background-color: #e0f2f1; /* Cor de fundo suave */
-    color: var(--primary-color);
+    background-color:#002B49 ; 
+    color: white; /* Corrigido para garantir o branco */
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -121,28 +131,69 @@ html {
     margin: 5px;
 }
 
-/* Layout da Lista de Produtos (Grid) */
-/* --- ESTILO PARA A LISTA DE PRODUTOS --- */
+/* Faixa de Destaque */
+.observacao h3 {
+    background-color:#002B49;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    
+    /* CORRIGIDO: Centralização responsiva e largura controlada */
+    max-width: 400px; 
+    margin: 20px auto; 
+    
+    border-radius: 10px;
+    font-style: normal;
+    text-align: center;
+}
+
+/* ====================================================================
+   LAYOUT DO GRID DE PRODUTOS
+   ==================================================================== */
 
 .produto-lista {
-  display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
-  flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
-  gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
+    display: flex;/* Ativa o layout flexível, colocando os itens lado a lado */ 
+    flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
+    gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
+    justify-content: space-around; /* ajudar no espaçamento */
+    margin-top: 40px;
 }
 
 .produto-item {
-  /* Define que cada item deve tentar ocupar 32% da largura do container. */
-  /* Usamos 32% em vez de 33.33% para dar uma folga para o espaçamento. */
-  flex-basis: 32%; 
-
-  /* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
-  box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;/* empilha verticalmente imagem, título e texto */
+    align-items: center; /* <-- centraliza horizontalmente imagem, título e texto */
+    flex-basis: 32%; /* Define que cada item deve tentar ocupar 32% da largura do container. */
+    box-sizing: border-box;/* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
+    padding: 8px; /* Adiciona padding interno ao card para visual */
+    text-align: center; /* centraliza o texto */
 }
 
-.produto-img {  
-    max-width: 60%; /* reduzido de 80% para 60% */
-    height: auto;
-    border-radius: 50%;
+/* reduz espaço entre imagem, título e parágrafo dentro de cada produto */
+.produto-item .produto-img {
+    display: block;
+    margin: 0 auto 8px; /* controla espaço abaixo da imagem (reduce) */
+}
+
+.produto-item h4 {
+    margin: 4px 0 6px; /* reduz margin-top do título */
+    line-height: 1.15;
+}
+
+.produto-item p {
+    margin: 0 0 12px; /* reduz margin-top do parágrafo */
+    line-height: 1.4;
+}
+
+.produto-img {
+    /* CORRIGIDO: Padronização da imagem para uniformizar o grid */
+    width: 80%;
+    height: 250px;
+    padding: 30px 30px; 
+    object-fit: cover; /* Faz a imagem preencher o espaço de forma uniforme */
+    
+    border-radius: 5px;
     margin-bottom: 15px;
 }
 
@@ -153,8 +204,73 @@ html {
 }
 
 .produto-item p {
-    font-size: 15px;
+    font-size: 18px;
     color: #777;
+    text-align: justify;
+    font-weight: bolder;
+    padding: 5px 0;
+   
+}
+footer {
+    /* CORRIGIDO: Deve ser 'display: flex' */
+    display: flex;
+    /* ESSENCIAL: Centraliza o conteúdo verticalmente (por altura) */
+    align-items: center; 
+    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+    
+    background-color:#002B49;
+    
+    /* REMOVIDO: text-align: center; (Redundante com justify-content: center) */
+    /* REMOVIDO: margin: 10px; (Pode causar deslocamento) */
+    
+    padding: 20px 0; /* Cria a altura para a centralização ser percebida */
+    
+    /* CORRIGIDO: Deve usar ponto, não vírgula */
+    font-size: 1.1rem; 
+    color: rgb(234, 224, 224);
+    border-top: 1px solid #eee;
+}
+
+.direitos_autorais p {
+    /* REMOVIDO: display: center; (Propriedade inválida) */
+    /* REMOVIDO: margin: -10px; (Pode anular a centralização do footer) */
+    margin: 0; 
+    
+    /* Centralização horizontal do texto (se o pai não for flex) */
+    text-align: center; 
+    
+    /* Deixando a fonte definida apenas aqui (ou herdada do footer) */
+    font-size: 1.1rem; 
+    color: rgb(234, 224, 224);
+}
+
+/* evitar que pais cortem o deslocamento */
+.marca-detalhe,
+.marca-detalhe .container {
+  overflow: visible !important;
+}
+
+/* mover o bloco que contém a logo */
+.logo_ManoVelho {
+  position: relative !important;
+  transform: translateY(-180px) !important; /* aumentar o valor para subir mais */
+  z-index: 9999 !important;
+  margin-bottom: 0 !important;
+}
+
+/* garantir proporção e centralização da imagem */
+.logo_ManoVelho .marca-logo {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 250px; /* ajuste para o tamanho desejado */
+  height: auto !important;
+}
+
+/* diminuir deslocamento no mobile */
+@media (max-width: 600px) {
+  .logo_ManoVelho { transform: translateY(-40px) !important; }
+  .logo_ManoVelho .marca-logo { max-width: 140px; }
 }
 
 /* Responsividade adicional para a nova página */
@@ -163,4 +279,40 @@ html {
         flex-direction: column;
         gap: 15px;
     }
+    
+    /* No celular, os produtos ocupam 100% da largura */
+    .produto-item {
+        flex-basis: 100%;
+    }
+}
+
+/* tornar o container referência para posicionamento absoluto */
+.marca-detalhe {
+  position: relative;       /* permite posicionar a logo por absolute */
+  overflow: visible !important;
+}
+
+/* posicionar a logo acima e centralizada */
+.logo_ManoVelho {
+  position: absolute !important;
+  top: -90px;               /* ajuste este valor para subir/baixar a logo */
+  left: 50%;
+  transform: translateX(-50%); /* centraliza horizontalmente */
+  z-index: 9999 !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+/* garantir proporção da imagem */
+.logo_ManoVelho .marca-logo {
+  display: block !important;
+  max-width: 250px; /* ajuste o tamanho aqui (ex.: 200px, 300px) */
+  width: auto;
+  height: auto !important;
+}
+
+/* ajustar no mobile */
+@media (max-width: 600px) {
+  .logo_ManoVelho { top: -40px !important; }
+  .logo_ManoVelho .marca-logo { max-width: 140px !important; }
 }

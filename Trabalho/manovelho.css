@@ -30,7 +30,6 @@ html {
     font-weight: normal;
 }
 
-/* Estilo para o Botão de Solicitação de Preço */
 .cta-button {
     background-color: #002B49;
     color: white; /* Cor branca para o texto */
@@ -64,6 +63,7 @@ html {
     border-bottom: 2px solid var(--primary-color);
 }
 
+
 .header-secundario .container {
     display: flex;
     justify-content: space-between;
@@ -73,6 +73,7 @@ html {
 .logo-pequena {
     width: 250px; 
     height: auto;
+    margin-right: 20px;
 }
 
 /* Estilo do Botão de Voltar */
@@ -81,6 +82,7 @@ html {
     font-weight: 600;
     color: var(--primary-color);
     padding: 8px 15px;
+    margin-left:10px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     text-decoration: none; /* Remove o sublinhado */
@@ -97,8 +99,8 @@ html {
     /* Reduz o padding superior para permitir que a logo suba (de 60px para 20px) */
     padding: 20px 0 60px 0; 
     text-align: center;
-    left: 50px;
-    top: -50px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 40px;
 }
 
@@ -108,7 +110,7 @@ html {
 }
 
 .intro-marca {
-    max-width: 800px;
+    max-width: 700px;
     margin: 20px auto 20px;
     font-size: 20px;
     color: #555;
@@ -164,26 +166,11 @@ html {
     display: flex;
     flex-direction: column;/* empilha verticalmente imagem, título e texto */
     align-items: center; /* <-- centraliza horizontalmente imagem, título e texto */
-    flex-basis: 32%; /* Define que cada item deve tentar ocupar 32% da largura do container. */
+    flex-basis: 32%;/* Define que cada item deve tentar ocupar 32% da largura do container. */
     box-sizing: border-box;/* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
-    padding: 8px; /* Adiciona padding interno ao card para visual */
-    text-align: center; /* centraliza o texto */
-}
-
-/* reduz espaço entre imagem, título e parágrafo dentro de cada produto */
-.produto-item .produto-img {
-    display: block;
-    margin: 0 auto 8px; /* controla espaço abaixo da imagem (reduce) */
-}
-
-.produto-item h4 {
-    margin: 4px 0 6px; /* reduz margin-top do título */
-    line-height: 1.15;
-}
-
-.produto-item p {
-    margin: 0 0 12px; /* reduz margin-top do parágrafo */
-    line-height: 1.4;
+    padding: 10px;/* Adiciona padding interno ao card para visual */
+    text-align: center;/* centraliza o texto */
+   
 }
 
 .produto-img {
@@ -212,21 +199,13 @@ html {
    
 }
 footer {
-    /* CORRIGIDO: Deve ser 'display: flex' */
+    
     display: flex;
-    /* ESSENCIAL: Centraliza o conteúdo verticalmente (por altura) */
-    align-items: center; 
-    /* Centraliza o conteúdo horizontalmente */
     justify-content: center;
-    
     background-color:#002B49;
-    
-    /* REMOVIDO: text-align: center; (Redundante com justify-content: center) */
-    /* REMOVIDO: margin: 10px; (Pode causar deslocamento) */
-    
-    padding: 20px 0; /* Cria a altura para a centralização ser percebida */
-    
-    /* CORRIGIDO: Deve usar ponto, não vírgula */
+    padding:10px 10px; /* Cria a altura para a centralização ser percebida */
+    margin-right: -50px;
+    margin-bottom: -15px;
     font-size: 1.1rem; 
     color: rgb(234, 224, 224);
     border-top: 1px solid #eee;
@@ -246,11 +225,12 @@ footer {
 }
 
 /* evitar que pais cortem o deslocamento */
-.marca-detalhe,
+
 .marca-detalhe .container {
-  overflow: visible !important;
+    margin-top: -50px;
 }
 
+   
 /* mover o bloco que contém a logo */
 .logo_ManoVelho {
   position: relative !important;
