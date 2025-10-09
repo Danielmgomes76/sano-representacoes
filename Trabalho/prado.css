@@ -14,10 +14,8 @@ html {
     width: 100%;
 }
 /* Reduz o tamanho do h2 apenas dentro do container */
-.container h2 {
-    font-size: 1.45rem;
-    font-weight: normal;
-}
+
+
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
    ==================================================================== */
@@ -61,35 +59,58 @@ html {
     padding: 90px 0;
     text-align: center;
 }
+.marca-prado {
+    width: auto;/* Ajuste conforme necessário */
+    margin: -120px auto 20px; /* Centraliza horizontalmente e adiciona margem
+    /* Define o container interno como o ponto de referência para a logo */
+    position: relative; 
+    /* Evita que elementos pais cortem o deslocamento */
+    overflow: visible; 
+}
 
 .marca-logo {
-    max-width: 500px;
-    margin-bottom: 15px;
+    max-width: 250px;
+    margin-bottom: 10px;
+   
 }
 
 .intro-marca {
     max-width: 800px;
-    margin: 0 auto 20px;
-    font-size: 15px;
+    margin: 30px auto 30px;
+    font-size: 20px;
     color: #555;
+    text-align: justify;
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     
     
 }
 
 .tag-produto {
     display: inline-block;
-    background-color: #e0f2f1; /* Cor de fundo suave */
-    color: var(--primary-color);
+    background-color: #002B49; /* Cor de fundo suave */
+    color: white;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
     margin: 5px;
+}
+.observacao h3 {
+    background-color:#002B49;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    max-width: 400px; 
+    margin: 20px auto; 
+    
+    border-radius: 10px;
+    font-style: normal;
+    text-align: center;
 }
 
 /* Layout da Lista de Produtos (Grid) */
@@ -111,7 +132,7 @@ html {
 }
 
 .produto-img {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -124,8 +145,40 @@ html {
 }
 
 .produto-item p {
-    font-size: 15px;
+    font-size: 18px;
     color: #777;
+    text-align: justify;
+    font-weight: bolder;
+    padding: 10px 45px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+.cta-button {
+    font-size:1.25rem;;
+    padding: 12px 25px;
+    background-color: #002B49;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 70px;
+    margin-bottom: 0;
+    text-decoration: none
+    
+}   
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002B49;
+    text-align: center;
+    margin: -5px;
+    padding: 1px 10px;       /* o mais fino possível sem sumir o conteúdo */
+    font-size: 1rem;
+    color: rgb(234, 224, 224);
+    line-height: 1;          /* diminui altura do texto */
+    min-height: unset;       /* evita altura fixa imposta por outros estilos */
 }
 
 /* Responsividade adicional para a nova página */

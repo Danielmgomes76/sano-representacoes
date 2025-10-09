@@ -7,17 +7,51 @@ html {
 
 .tabela-preco-center .cta-button {
     font-size: 1.25rem;
+    
 }
 /* Centraliza o botão de solicitar tabela de preços */
 .tabela-preco-center {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 100%; /* garante que ocupe toda a linha */
+    margin: 40px 0;
+  
+}
+.cta-button {
+    background-color: #002B49;
+    color: white; /* Cor branca para o texto */
+    padding: 12px 25px;
+    font-size: 1.25rem; /* Fonte maior para destacar */
+    border: none;
+    border-radius: 10px;
+    text-decoration: none; /* Remove o sublinhado */    
+    font-weight: bold;
+    display: inline-block; /* Garante que o background se ajuste ao texto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    
 }
 /* Reduz o tamanho do h2 apenas dentro do container */
 .container h2 {
     font-size: 1.45rem;
     font-weight: normal;
+   
+}
+.container h3 {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 1.45rem;
+    font-weight: normal;
+    margin-top: 70px;
+    text-align: center; 
+    color: white;
+    background-color: #002B49;
+    font-weight: 400;
+    padding: 10px 10px; /* Adicione esta linha */
+    border-radius: 10px; /* Adicione esta linha */
+
 }
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
@@ -64,8 +98,8 @@ html {
 }
 
 .marca-logo {
-    max-width: 500px;
-    margin-bottom: 15px;
+    max-width: 400px;
+    margin-top: -35px;
 }
 
 .intro-marca {
@@ -84,8 +118,8 @@ html {
 
 .tag-produto {
     display: inline-block;
-    background-color: #e0f2f1; /* Cor de fundo suave */
-    color: var(--primary-color);
+    background-color:#002B49; 
+    color: white;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
@@ -125,9 +159,27 @@ html {
 }
 
 .produto-item p {
-    font-size: 15px;
+    font-size: 18px;
     color: #777;
-}
+    line-height: 1.4;
+    text-align: justify;
+    padding-right: 40px;
+    padding-left: 40px;
+    }
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002B49;
+    text-align: center;
+    margin: -5px;
+    padding: 1px 10px;       /* o mais fino possível sem sumir o conteúdo */
+    font-size: 1rem;
+    color: rgb(234, 224, 224);
+    line-height: 1;          /* diminui altura do texto */
+    min-height: unset;   
+}    
 
 /* Responsividade adicional para a nova página */
 @media (max-width: 600px) {

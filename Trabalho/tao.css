@@ -5,9 +5,10 @@
     width: 100%;
 }
 /* Reduz o tamanho do h2 apenas dentro do container */
-.container h2 {
+.container p {
     font-size: 1.45rem;
     font-weight: normal;
+    text-align: justify;
 }
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
@@ -54,7 +55,7 @@
 }
 
 .marca-logo {
-    max-width: 500px;
+    max-width: 300px;
     margin-bottom: 15px;
 }
 
@@ -67,24 +68,25 @@
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-bottom: 40px;
-    
-    
+    margin-top: -80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
+
 
 .tag-produto {
     display: inline-block;
-    background-color: #e0f2f1; /* Cor de fundo suave */
-    color: var(--primary-color);
-    padding: 8px 15px;
+    background-color: #002B49; /* Cor de fundo suave */
+    color: white; /* Cor do texto */
+    padding: 10px 10px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
     margin: 5px;
+    margin-top: 80px;
 }
 
-/* Layout da Lista de Produtos (Grid) */
-/* --- ESTILO PARA A LISTA DE PRODUTOS --- */
 
 .produto-lista {
   display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
@@ -105,6 +107,7 @@
     max-width: 80%;
     height: auto;
     border-radius: 5px;
+    margin-top: 100px;
     margin-bottom: 15px;
 }
 
@@ -115,9 +118,22 @@
 }
 
 .produto-item p {
-    font-size: 15px;
+    font-size: 20px;
     color: #777;
 }
+footer {
+    display: flex;/* Ativa o layout flexível, colocando os itens lado a lado */
+    align-items: center;
+    justify-content: center;
+    background-color: #002B49;
+    text-align: center;
+    margin: -5px;
+    padding:-10px 5px;       /* o mais fino possível sem sumir o conteúdo */
+    font-size: 1rem;
+    color: rgb(234, 224, 224);
+    line-height: 1;          /* diminui altura do texto */
+    min-height: unset;  
+ }
 
 /* Responsividade adicional para a nova página */
 @media (max-width: 600px) {

@@ -33,7 +33,7 @@ html {
 .cta-button {
     background-color: #002B49;
     color: white; /* Cor branca para o texto */
-    padding: 12px 25px;
+    
     font-size: 1.25rem; /* Fonte maior para destacar */
     border: none;
     border-radius: 10px;
@@ -42,6 +42,7 @@ html {
     display: inline-block; /* Garante que o background se ajuste ao texto */
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
+    padding: 10px 20px;
 }
 
 /* Centraliza o botão de solicitar tabela de preços de forma responsiva */
@@ -125,7 +126,7 @@ html {
 .tag-produto {
     display: inline-block;
     background-color:#002B49 ; 
-    color: white; /* Corrigido para garantir o branco */
+    color: white; 
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 14px;
