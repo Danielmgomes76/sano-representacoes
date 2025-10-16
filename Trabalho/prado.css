@@ -1,115 +1,79 @@
-/* ====================================================================
-   9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
-   ==================================================================== */
 
-/* Estilo do Header Secundário (apenas logo e botão de voltar) */
-.header-secundario {
-    background-color: var(--light-bg);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
+.marca-prado {
+    width: auto;
+    margin: -120px auto 20px; 
+    position: relative; 
+    overflow: visible; 
 }
 
-.header-secundario .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-pequena {
-    width: 250px; /* Logo menor no header secundário */
-    height: auto;
-}
-
-/* Estilo do Botão de Voltar */
-.back-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.back-button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 30px 0 20px 0;
-    text-align: center;
+    padding: 90px 0;  
 }
 
 .marca-logo {
-    max-width: 300px;
-    margin-bottom: 30px;
+    max-width: 250px;
+    margin-bottom: 10px; 
 }
 
 .intro-marca {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 25px;
-    color: #555;
+    max-width: 800px; 
+    margin: 30px auto 30px; 
 }
 
-/* Tags de Destaque do Produto */
-.destaques-linha {
-    margin-bottom: 40px;
-}
-
-.tag-produto {
-    display: inline-block;
-    background-color: #e0f2f1; /* Cor de fundo suave */
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
-}
-
-/* Layout da Lista de Produtos (Grid) */
-/* --- ESTILO PARA A LISTA DE PRODUTOS --- */
-
-.produto-lista {
-  display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
-  flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
-  gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
+.observacao h3 {
+    background-color: #002B49;
+    font-size: 20px; 
+    color: white;
+    margin-bottom: 30px; 
+    padding: 10px 10px;
+    max-width: 400px; 
+    margin: 20px auto; 
+    border-radius: 10px; 
+    font-style: normal; 
+    text-align: center; 
 }
 
 .produto-item {
-  /* Define que cada item deve tentar ocupar 32% da largura do container. */
-  /* Usamos 32% em vez de 33.33% para dar uma folga para o espaçamento. */
-  flex-basis: 32%; 
-
-  /* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
-  box-sizing: border-box; 
+    box-sizing: border-box; 
 }
 
 .produto-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
+    max-width: 70%; 
+    height: auto; 
+    border-radius: 5px; 
     margin-bottom: 15px;
 }
 
 .produto-item h4 {
-    font-size: 25px;
-    color: var(--dark-text);
-    margin-bottom: 5px;
+    font-size: 25px; 
+    color: var(--dark-text); 
+    margin-bottom: 5px; 
 }
 
 .produto-item p {
-    font-size: 15px;
+    font-size: 18px; 
     color: #777;
+    text-align: justify;
+    font-weight: bolder;
+    padding: 10px 45px; 
+    margin-bottom: 15px;
 }
 
-/* Responsividade adicional para a nova página */
-@media (max-width: 600px) {
-    .header-secundario .container {
-        flex-direction: column;
-        gap: 15px;
-    }
+.cta-button {
+    margin-top: 70px; 
+    margin-bottom: 0;  
+}
+
+footer {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #002B49; 
+    text-align: center;
+    margin: -5px; 
+    padding: 1px 10px;  
+    font-size: 1rem; 
+    color: rgb(234, 224, 224); 
+    line-height: 1;          
+    min-height: unset;      
 }
