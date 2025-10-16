@@ -1,43 +1,8 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
-   ========================================================================== */
+
 html {
-  scroll-padding-top: 80px; /* ajuste conforme a altura do seu header */
+    scroll-padding-top: 80px;
 }
 
-.tabela-preco-center .cta-button {
-    font-size: 1.25rem;
-    
-}
-/* Centraliza o botão de solicitar tabela de preços */
-.tabela-preco-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* garante que ocupe toda a linha */
-    margin: 40px 0;
-  
-}
-.cta-button {
-    background-color: #002B49;
-    color: white; /* Cor branca para o texto */
-    padding: 12px 25px;
-    font-size: 1.25rem; /* Fonte maior para destacar */
-    border: none;
-    border-radius: 10px;
-    text-decoration: none; /* Remove o sublinhado */    
-    font-weight: bold;
-    display: inline-block; /* Garante que o background se ajuste ao texto */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
-    
-}
-/* Reduz o tamanho do h2 apenas dentro do container */
-.container h2 {
-    font-size: 1.45rem;
-    font-weight: normal;
-   
-}
 .container h3 {
     display: inline-block;
     width: auto;
@@ -49,52 +14,12 @@ html {
     color: white;
     background-color: #002B49;
     font-weight: 400;
-    padding: 10px 10px; /* Adicione esta linha */
-    border-radius: 10px; /* Adicione esta linha */
-
-}
-/* ====================================================================
-   9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
-   ==================================================================== */
-
-/* Estilo do Header Secundário (apenas logo e botão de voltar) */
-.header-secundario {
-    background-color: var(--light-bg);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 
-.header-secundario .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-pequena {
-    width: 250px; /* Logo menor no header secundário */
-    height: auto;
-}
-
-/* Estilo do Botão de Voltar */
-.back-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.back-button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
     padding: 90px 0;
-    text-align: center;
 }
 
 .marca-logo {
@@ -103,46 +28,16 @@ html {
 }
 
 .intro-marca {
-    max-width: 800px;
     margin: 0 auto 20px;
     font-size: 15px;
-    color: #555;
 }
 
-/* Tags de Destaque do Produto */
 .destaques-linha {
     margin-bottom: 40px;
-    
-    
-}
-
-.tag-produto {
-    display: inline-block;
-    background-color:#002B49; 
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
-}
-
-/* Layout da Lista de Produtos (Grid) */
-/* --- ESTILO PARA A LISTA DE PRODUTOS --- */
-
-.produto-lista {
-  display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
-  flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
-  gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
 }
 
 .produto-item {
-  /* Define que cada item deve tentar ocupar 32% da largura do container. */
-  /* Usamos 32% em vez de 33.33% para dar uma folga para o espaçamento. */
-  flex-basis: 32%; 
-
-  /* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
-  box-sizing: border-box; 
+    box-sizing: border-box; 
 }
 
 .produto-img {
@@ -165,7 +60,7 @@ html {
     text-align: justify;
     padding-right: 40px;
     padding-left: 40px;
-    }
+}
 
 footer {
     display: flex;
@@ -174,17 +69,9 @@ footer {
     background-color: #002B49;
     text-align: center;
     margin: -5px;
-    padding: 1px 10px;       /* o mais fino possível sem sumir o conteúdo */
+    padding: 1px 10px;
     font-size: 1rem;
     color: rgb(234, 224, 224);
-    line-height: 1;          /* diminui altura do texto */
+    line-height: 1;
     min-height: unset;   
-}    
-
-/* Responsividade adicional para a nova página */
-@media (max-width: 600px) {
-    .header-secundario .container {
-        flex-direction: column;
-        gap: 15px;
-    }
 }

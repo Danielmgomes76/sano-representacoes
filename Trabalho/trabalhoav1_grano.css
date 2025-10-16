@@ -1,10 +1,3 @@
-html {
-    scroll-padding-top: 60px; /* Espaçamento para o scroll suave */
-}
-
-/* ====================================================================
-   AJUSTES GERAIS E BOTÕES
-   ==================================================================== */
 
 .logo_grano {
     text-align: center;
@@ -12,200 +5,66 @@ html {
     margin-top: -80px; 
 }
 
-/* Reduz o tamanho do h2 apenas dentro do container (se houver h2) */
-.container h2 {
-    font-size: 1.45rem;
-    font-weight: normal;
-}
-
-/* Estilo para o Botão de Solicitação de Preço */
-.cta-button {
-    background-color: #002B49; /* Azul escuro, cor do preenchimento*/
-    color: white; /* Cor branca para o texto */
-    padding: 12px 25px; /* Espaçamento interno maior */
-    font-size: 1.25rem; /* Fonte maior para destacar */
-    border: none;/* Remove a borda padrão */
-    border-radius: 10px;/* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* Texto em negrito */
-    display: inline-block; /* Garante que o background se ajuste ao texto */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
-    cursor: pointer;/* Cursor de ponteiro ao passar o mouse */
-}
-
-/* Centraliza o botão de solicitar tabela de preços de forma responsiva */
-.tabela-preco-center {
-    display: flex; /* Flexbox para centralização */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    margin: 40px 0; /* Espaçamento acima e abaixo */
-}
-
-/* ====================================================================
-   9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
-   ==================================================================== */
-
-/* Estilo do Header Secundário */
-.header-secundario {
-    background-color: var(--light-bg); /* Cor de fundo clara */
-    padding: 15px 0; /* Espaçamento vertical */
-    border-bottom: 2px solid var(--primary-color);/* Linha inferior para destaque */
-}
-
-.header-secundario .container {
-    display: flex; /* Flexbox para layout */
-    justify-content: space-between; /* Espaço entre os itens */
-    align-items: center; /* Alinha verticalmente ao centro */
-}
-
-.logo-pequena {
-    width: 250px; 
-    height: auto;
-}
-
-/* Estilo do Botão de Voltar */
-.back-button {
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: 600; /* Negrito */
-    color: var(--primary-color);/* Azul escuro */
-    padding: 8px 15px;/* Espaçamento interno */
-    border: 1px solid var(--primary-color);/* Borda azul escuro */
-    border-radius: 5px;/* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: background-color 0.3s, color 0.3s;/* Transições suaves */
-}
-
-.back-button:hover {
-    background-color: var(--primary-color);/* Azul escuro */
-    color: white;
-}
-
-/* Estilo da Seção de Detalhes da Marca */
-.marca-detalhe {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.marca-logo {
-    max-width: 800px;
-    margin-bottom: 5px;
-}
-
-.intro-marca {
-    max-width: 800px;
-    margin: 20px auto 20px;
-    font-size: 20px;
-    color: #555;
-    text-align: justify;
-}
-
-/* Tags de Destaque do Produto */
-.destaques-linha {
-    margin-bottom: 60px;
-}
-
-.tag-produto {
-    display: inline-block;
-    background-color:#002B49 ; 
-    color: white; /* Corrigido para garantir o branco */
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
-}
-
-/* Faixa de Destaque */
 .observacao h3 {
-    background-color:#002B49;
+    background-color: #002B49;
     font-size: 20px;
     color: white;
     margin-bottom: 30px;
     padding: 10px 10px;
-    
-    /* CORRIGIDO: Centralização responsiva e largura controlada */
     max-width: 400px; 
     margin: 20px auto; 
-    
     border-radius: 10px;
     font-style: normal;
     text-align: center;
 }
 
-/* ====================================================================
-   LAYOUT DO GRID DE PRODUTOS
-   ==================================================================== */
-
-.produto-lista {
-    display: flex; /* Usando Flexbox para layout flexível */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    gap: 20px; /* Espaçamento entre os itens */
-    justify-content: space-around; /* Adicionei isso para ajudar no espaçamento */
-}
-
 .produto-item {
-    /* CORRIGIDO: ESSENCIAL para igualar a altura dos cards na mesma linha */
-    display: flex; /* Usando Flexbox para layout flexível */
-    flex-direction: column;/* Alinha itens verticalmente */
-    flex-basis: 32%; /* Aproximadamente 3 itens por linha com espaçamento */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
-    padding: 10px; /* Adiciona padding interno ao card para visual */
-    text-align: center; /* Centraliza o texto */
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .produto-img {
-    /* CORRIGIDO: Padronização da imagem para uniformizar o grid */
-    width: 80%;/* Largura fixa para uniformizar o grid */
-    height: 250px; /* Altura fixa para uniformizar o grid */
-    padding: 80px 30px; /* Espaçamento interno para evitar que a imagem fique colada nas bordas */
-    object-fit: cover; /* Faz a imagem preencher o espaço de forma uniforme */
+    width: 80%;
+    height: 250px;
+    padding: 80px 30px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
 .produto-item h4 {
-    font-size: 25px; /* Tamanho da fonte */
-    color: var(--dark-text); /* Cor do texto */
-    margin-bottom: 5px;/* Espaçamento abaixo do título */
+    font-size: 25px;
+    color: var(--dark-text);
+    margin-bottom: 5px;
 }
 
 .produto-item p {
-    font-size: 18px; /* Tamanho da fonte */
-    text-align: justify; /* Justifica o texto para melhor leitura */
-    font-weight: bolder; /* Negrito para destacar */
-    padding: 5px 0; /* Espaçamento vertical */
-   
+    font-size: 18px;
+    text-align: justify;
+    font-weight: bolder;
+    padding: 5px 0;
 }
-footer { /* Rodapé */
-    display: flexbox;
+
+footer {
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#002B49;
+    background-color: #002B49;
     text-align: center;
     margin: 10px;
     padding: 20px 0;
-    font-size: 1,1rem;
+    font-size: 1.1rem;
     color: rgb(234, 224, 224);
     border-top: 1px solid #eee;
 }
+
 .direitos_autorais p {
-    display: center;
     margin: -10px;
     font-size: 1.1rem;
-    color: rgb(234, 224, 224);  
-    
+    color: rgb(234, 224, 224);
 }
 
-
-
-/* Responsividade adicional para a nova página */
 @media (max-width: 600px) {
-    .header-secundario .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    /* No celular, os produtos ocupam 100% da largura */
     .produto-item {
         flex-basis: 100%;
     }

@@ -1,109 +1,27 @@
 
-.tabela-preco-center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.container p {
-    font-size: 1.45rem;
-    font-weight: normal;
-    text-align: justify;
-   
-}
-/* ====================================================================
-   9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
-   ==================================================================== */
-
-/* Estilo do Header Secundário (apenas logo e botão de voltar) */
-.header-secundario {
-    background-color: var(--light-bg);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
-}
-
-.header-secundario .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-pequena {
-    width: 250px; 
-    height: auto;
-}
-
-/* Estilo do Botão de Voltar */
-.back-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius:  5px;
-    transition: background-color 0.3s, color 0.3s; 
-}
-
-.back-button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
     padding: 20px 250px 90px 250px;
-    text-align: center;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 40px;
 }
 
-.marca-logo {
-    max-width: 300px;   
-    margin-bottom: 15px; 
-}
-
 .intro-marca {
-    max-width: 800px; 
-    margin: 30px auto 20px auto;
     font-size: 18px; 
-    color: #555;
 }
 
-/* Tags de Destaque do Produto */
 .destaques-linha {
     margin-top: -80px; 
     margin-bottom: 20px; 
-    display: flex; 
-    justify-content: center; 
 }
 
-
 .tag-produto {
-    display: inline-block; 
-    background-color: #002B49; 
-    color: white; 
     padding: 10px 10px; 
-    border-radius: 20px;
-    font-size: 14px; 
-    font-weight: 600; 
-    margin: 5px; 
     margin-top: 80px; 
 }
 
-
-.produto-lista {
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 20px; 
-}
-
 .produto-item {
-  
-  flex-basis: 32%; 
-
- 
-  box-sizing: border-box; 
+    box-sizing: border-box; 
 }
 
 .produto-img {
@@ -124,6 +42,7 @@
     font-size: 20px; 
     color: #777; 
 }
+
 footer {
     display: flex;
     align-items: center; 
@@ -131,17 +50,9 @@ footer {
     background-color: #002B49; 
     text-align: center; 
     margin: -5px; 
-    padding:-10px 5px;
+    padding: -10px 5px;
     font-size: 1rem; 
     color: rgb(234, 224, 224); 
     line-height: 1;          
     min-height: unset;         
- }
-
-/* Responsividade adicional para a nova página */
-@media (max-width: 600px) {
-    .header-secundario .container {
-        flex-direction: column;
-        gap: 15px;
-    }
 }
