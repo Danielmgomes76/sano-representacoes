@@ -1,5 +1,5 @@
 html {
-    scroll-padding-top: 60px; 
+    scroll-padding-top: 60px; /* Espaçamento para o scroll suave */
 }
 
 /* ====================================================================
@@ -20,25 +20,25 @@ html {
 
 /* Estilo para o Botão de Solicitação de Preço */
 .cta-button {
-    background-color: #002B49;
+    background-color: #002B49; /* Azul escuro, cor do preenchimento*/
     color: white; /* Cor branca para o texto */
-    padding: 12px 25px;
+    padding: 12px 25px; /* Espaçamento interno maior */
     font-size: 1.25rem; /* Fonte maior para destacar */
-    border: none;
-    border-radius: 10px;
+    border: none;/* Remove a borda padrão */
+    border-radius: 10px;/* Bordas arredondadas */
     text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold;
+    font-weight: bold; /* Texto em negrito */
     display: inline-block; /* Garante que o background se ajuste ao texto */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    cursor: pointer;/* Cursor de ponteiro ao passar o mouse */
 }
 
 /* Centraliza o botão de solicitar tabela de preços de forma responsiva */
 .tabela-preco-center {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 40px 0; 
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 40px 0; /* Espaçamento acima e abaixo */
 }
 
 /* ====================================================================
@@ -47,15 +47,15 @@ html {
 
 /* Estilo do Header Secundário */
 .header-secundario {
-    background-color: var(--light-bg);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--light-bg); /* Cor de fundo clara */
+    padding: 15px 0; /* Espaçamento vertical */
+    border-bottom: 2px solid var(--primary-color);/* Linha inferior para destaque */
 }
 
 .header-secundario .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox para layout */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
 .logo-pequena {
@@ -65,18 +65,18 @@ html {
 
 /* Estilo do Botão de Voltar */
 .back-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+    color: var(--primary-color);/* Azul escuro */
+    padding: 8px 15px;/* Espaçamento interno */
+    border: 1px solid var(--primary-color);/* Borda azul escuro */
+    border-radius: 5px;/* Bordas arredondadas */
     text-decoration: none; /* Remove o sublinhado */
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;/* Transições suaves */
 }
 
 .back-button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color);/* Azul escuro */
     color: white;
 }
 
@@ -137,49 +137,46 @@ html {
    ==================================================================== */
 
 .produto-lista {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
+    display: flex; /* Usando Flexbox para layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
     justify-content: space-around; /* Adicionei isso para ajudar no espaçamento */
 }
 
 .produto-item {
     /* CORRIGIDO: ESSENCIAL para igualar a altura dos cards na mesma linha */
-    display: flex;
-    flex-direction: column;
-    
-    flex-basis: 32%; 
-    box-sizing: border-box; 
+    display: flex; /* Usando Flexbox para layout flexível */
+    flex-direction: column;/* Alinha itens verticalmente */
+    flex-basis: 32%; /* Aproximadamente 3 itens por linha com espaçamento */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
     padding: 10px; /* Adiciona padding interno ao card para visual */
-    text-align: center;
+    text-align: center; /* Centraliza o texto */
 }
 
 .produto-img {
     /* CORRIGIDO: Padronização da imagem para uniformizar o grid */
-    width: 80%;
-    height: 250px;
-    padding: 80px 30px; 
+    width: 80%;/* Largura fixa para uniformizar o grid */
+    height: 250px; /* Altura fixa para uniformizar o grid */
+    padding: 80px 30px; /* Espaçamento interno para evitar que a imagem fique colada nas bordas */
     object-fit: cover; /* Faz a imagem preencher o espaço de forma uniforme */
-    
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
 .produto-item h4 {
-    font-size: 25px;
-    color: var(--dark-text);
-    margin-bottom: 5px;
+    font-size: 25px; /* Tamanho da fonte */
+    color: var(--dark-text); /* Cor do texto */
+    margin-bottom: 5px;/* Espaçamento abaixo do título */
 }
 
 .produto-item p {
-    font-size: 18px;
-    color: #777;
-    text-align: justify;
-    font-weight: bolder;
-    padding: 5px 0;
+    font-size: 18px; /* Tamanho da fonte */
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    font-weight: bolder; /* Negrito para destacar */
+    padding: 5px 0; /* Espaçamento vertical */
    
 }
-footer {
+footer { /* Rodapé */
     display: flexbox;
     align-items: center;
     justify-content: center;

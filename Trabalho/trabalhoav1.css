@@ -1,9 +1,7 @@
 /* ==========================================================================
    1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
    ========================================================================== */
-html {
-  scroll-padding-top: 60px; /* ajuste conforme a altura do seu header */
-}
+
 /* Definindo a paleta de cores para fácil manutenção */
 :root {
     --cor-primaria: #2E7D32; /* Verde escuro para botões e destaques */
@@ -16,99 +14,98 @@ html {
 
 /* Reset básico e configurações do corpo */
 * {
-    margin: 0;/* Remove margens padrão */
-    padding: 0;/* Remove espaçamentos padrão */
-    box-sizing: border-box;/* Inclui padding e border na largura e altura totais dos elementos */
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Regras HTML/Body Consolidadas */
 html {
-    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links do menu */
-    scroll-padding-top: 120px;/*Adiciona 120px de espaço no topo ao rolar até uma seção da página*/
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* Mantendo o valor maior e removendo o anterior de 60px */
 }
 
 body {
-    font-family: 'Poppins', sans-serif;/* Define a fonte principal do texto da página como Poppins" se ela não estiver disponível, usa uma fonte genérica sem serifa (sans-serif) */
-    background-color: var(--cor-fundo); /*Cor fundo do site*/
-    color: var(--cor-texto); /*Define a cor padrão do corpo da página*/
-    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
+/* Container */
 .container {
-    max-width: 1100px;/* Largura máxima do conteúdo */
-    margin: 0 auto;/* Centraliza o container horizontalmente */
-    margin-top: -80px;/* Ajuste para sobrepor o header */
-    padding: 0 20px;/* Espaçamento interno nas laterais */
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: -80px; /* Ajuste para sobrepor o header */
+    padding: 0 20px;
 }
 
+/* Estilos de Links */
 a {
-    color: var(--cor-primaria);/* Cor dos links */
-    text-decoration: none;/* Remove o sublinhado padrão dos links */
-    transition: color 0.3s ease;/* Transição suave na mudança de cor ao passar o mouse */
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--cor-secundaria);/* Cor dos links ao passar o mouse */
+    color: var(--cor-secundaria);
 }
 
+/* Estilos de Títulos */
 h1, h2, h3 {
-    color: var(--cor-secundaria);/* Cor dos títulos */
-    margin-bottom: 20px;/* Espaçamento abaixo dos títulos */
-    font-weight: 600;/* Deixa os títulos em negrito */
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 2.5rem;/* Tamanho do título secundário */
-    text-align: center;/* Centraliza os títulos h2 */
-    margin-bottom: 40px;/* Espaçamento maior abaixo dos títulos h2 */
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px; /* Sobrescreve h1, h2, h3 */
 }
 
 section {
-    padding: 80px 0;/* Espaçamento vertical entre as seções */
+    padding: 80px 0;
 }
 
 /* ==========================================================================
    2. CABEÇALHO E NAVEGAÇÃO
    ========================================================================== */
-/* ==========================================================================
-   2. CABEÇALHO E NAVEGAÇÃO (Layout Centralizado e Compacto)
-   ========================================================================== */
 
-   header .logo, header a.logo {
-    color: var(--cor-secundaria); /*Cor do sano representações acima do  menu */
-    font-size:xx-large;            /* Aumenta o tamanho para dar destaque (ajuste se precisar) */
-    font-weight: 700;             /* Deixa o texto em negrito */
-    text-decoration: none;        /* Remove qualquer sublinhado de link */
-}
 header {
-    background-color: var(--cor-fundo);/* Cor de fundo do cabeçalho */
-    padding: 5px 0px;/* Espaçamento interno do cabeçalho */
-    border-bottom: 1px solid #eee;/* Linha sutil abaixo do cabeçalho */
-    position: sticky; /*Faz cabeçalho grudar no topo da página*/
-    top: 0; /* Define a posição inicial para o sticky: o cabeçalho fica fixo a partir do topo (0px de distância). */
-    z-index: 1000;/* Garante que o cabeçalho fique acima de outros elementos da página */
+    background-color: var(--cor-fundo);
+    padding: 5px 0; /* Shorthand */
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-header .container {
-    display: flex;/* Usa Flexbox para layout */
-    flex-direction: column; /* Alinha itens em coluna (logo em cima, menu embaixo) */
-    align-items: center;/* O mais importante: Centraliza tudo horizontalmente */
-    gap: 8px;/* Espaçamento entre logo e menu */
-    justify-content: space-between;/* Espaço entre logo e menu */
-    
+header .logo, header a.logo {
+    color: var(--cor-secundaria);
+    font-size: xx-large;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.logo {
+header .container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 8px;
+    /* justify-content: space-between; (Removido por ser redundante em flex-direction: column; com align-items: center;) */
+}
 
-    height: 80px; /* Mantém um tamanho de logo razoável */
+.logo img.empresa {
+    height: 80px;
     width: auto;
 }
 
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 30px; /* Espaço entre os links "Home", "Sobre", etc. */
+    gap: 30px;
 }
 
 header nav a {
@@ -131,9 +128,7 @@ header nav a:hover {
 .introducao {
     background-color: var(--cor-fundo-secao);
     text-align: center;
-    padding: 120px 60px ;
-   
-   
+    padding: 120px 60px;
 }
 
 .introducao h1 {
@@ -143,34 +138,32 @@ header nav a:hover {
 
 .introducao p {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin: 0 auto 20px; /* Shorthand: top=0, left/right=auto, bottom=20px */
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .cta-button {
     display: inline-block;
     background-color: var(--cor-primaria);
     color: var(--cor-texto-claro);
-    padding: 25px 30px;/* Espaçamento interno do botão */
-    border-radius: 8px;/* Bordas arredondadas */
-    font-weight: 600;/* Deixa o texto em negrito */
-    font-size: 1rem;/* Tamanho da fonte */
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #256a28; /* Verde um pouco mais escuro */
-    color: var(--cor-texto-claro);/* Mantém o texto claro */
-    transform: translateY(-3px);/* Leve elevação ao passar o mouse */
+    background-color: #256a28;
+    color: var(--cor-texto-claro);
+    transform: translateY(-3px);
 }
 
 .credibilidade {
-    display: flex;/* Usa Flexbox para layout */
-    justify-content: center;/* Centraliza os itens horizontalmente */
-    gap: 40px;/* Espaçamento entre os itens */
-    margin-top: 40px;/* Espaçamento acima da seção de credibilidade */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .credibilidade-item {
@@ -187,20 +180,20 @@ header nav a:hover {
 /* ==========================================================================
    4. SEÇÃO SOBRE NÓS
    ========================================================================== */
+
 #sobre {
     background-color: var(--cor-fundo);
-    padding-top: -120px;
+    /* padding-top: -120px; (Removido, padding-top negativo não tem efeito, use margin se necessário) */
 }
 #sobre h2 {
-    margin-bottom: 10px;/* Reduz o espaçamento abaixo do título */
+    margin-bottom: 10px;
 }
 
 .sobre-conteudo {
-    display: grid;/* Usa Grid para layout */
-    grid-template-columns: repeat(3, 1fr);/* Três colunas de largura igual */
-    gap: 5px;/* Espaçamento entre os artigos */
-    text-align: justify;/* Centraliza o texto dentro dos artigos */
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    text-align: justify;
 }
 
 .sobre-conteudo article {
@@ -208,27 +201,30 @@ header nav a:hover {
 }
 
 .sobre-conteudo h3 {
-    font-size: 1.5rem;/* Tamanho do subtítulo */
-    text-align: center;/* Centraliza o subtítulo */
+    font-size: 1.5rem;
+    text-align: center;
 }
-.observacao p{
+
+/* **OTIMIZAÇÃO: CONSOLIDAÇÃO DOS ESTILOS DE CABEÇALHOS EM DESTAQUE** */
+.observacao p,
+.cabecalho.sobre h3,
+.contato-info h3 {
     background-color: var(--cor-secundaria);
     text-align: center;
     margin-bottom: 40px;
-    color: white ;/* Cor do texto */
-    font-weight: 400; /* Adicione esta linha */
-    padding: 10px 10px; /* Adicione esta linha */
-    border-radius: 10px; /* Adicione esta linha */
+    color: var(--cor-texto-claro); /* Usando variável */
+    font-weight: 400;
+    border-radius: 10px;
 }
-.cabecalho.sobre h3{
-    background-color: var(--cor-secundaria);
-    text-align: center;
-    margin-bottom: 40px;
-    color: white ;/* Cor do texto */
-    font-weight: 400; /* Adicione esta linha */
-    padding: 5px 10px; /* Adicione esta linha */
-    border-radius: 10px; /* Adicione esta linha */
+/* Aplicação de padding específico */
+.observacao p, 
+.contato-info h3 {
+    padding: 10px; /* Shorthand: 10px em todos os lados */
 }
+.cabecalho.sobre h3 {
+    padding: 5px 10px; /* Padding específico (top/bottom: 5px, left/right: 10px) */
+}
+
 
 /* ==========================================================================
    5. SEÇÃO PORTFÓLIO
@@ -237,7 +233,7 @@ header nav a:hover {
     background-color: var(--cor-fundo-secao);
 }
 
-#portfolio p {
+#portfolio > .container > p { /* Seletor mais específico para a p abaixo do h2 */
     text-align: center;
     margin-bottom: 40px;
 }
@@ -265,10 +261,10 @@ header nav a:hover {
 }
 
 .marca-card img {
-    max-width: 100%;/* Garante que a imagem não ultrapasse a largura do card */
-    height: 120px;/* Altura fixa para manter consistência */
-    object-fit: contain;/* Mantém a proporção da imagem */
-    margin: 0 auto 20px auto;
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 20px; /* Shorthand */
 }
 
 .marca-card h3 {
@@ -330,25 +326,14 @@ header nav a:hover {
     background-color: #256a28;
     color: var(--cor-texto-claro);
 }
-.contato-info h3{
-    background-color: var(--cor-secundaria);
-    text-align: center;
-    margin-bottom: 40px;
-    color: white ;/* Cor do texto */
-    font-weight: 400; /* Adicione esta linha */
-    padding: 10px 10px; /* Adicione esta linha */
-    border-radius: 10px; /* Adicione esta linha */
-}
-
-
 
 /* ==========================================================================
    7. RODAPÉ
    ========================================================================== */
 footer {
-    background-color:#002B49;
+    background-color: var(--cor-secundaria); /* Usando variável */
     text-align: center;
-    padding: 5px 5px;
+    padding: 5px; /* Shorthand */
     font-size: 0.9rem;
     color: rgb(234, 224, 224);
     border-top: 1px solid #eee;
@@ -367,18 +352,16 @@ footer {
     .hero h1 { font-size: 2.2rem; }
      
     header nav {
-        display: none; /* Em um projeto real, aqui entraria o menu hamburguer */
+        display: none;
     }
 
     .sobre-conteudo,
     .contato-wrapper {
-        grid-template-columns: 1fr; /* Transforma em coluna única */
+        grid-template-columns: 1fr;
     }
 
     .credibilidade {
-        flex-direction: column; /* Itens um abaixo do outro */
+        flex-direction: column;
         gap: 20px;
     }
-    
-  
 }

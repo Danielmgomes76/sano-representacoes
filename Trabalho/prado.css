@@ -5,13 +5,13 @@ html {
   scroll-padding-top: 60px; /* ajuste conforme a altura do seu header */
 }
 .tabela-preco-center .cta-button {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Fonte maior para destacar */
 }
 /* Centraliza o botão de solicitar tabela de preços */
 .tabela-preco-center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
 }
 /* Reduz o tamanho do h2 apenas dentro do container */
 
@@ -22,42 +22,42 @@ html {
 
 /* Estilo do Header Secundário (apenas logo e botão de voltar) */
 .header-secundario {
-    background-color: var(--light-bg);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--light-bg); /* Cor de fundo clara */
+    padding: 15px 0; /* Espaçamento vertical */
+    border-bottom: 2px solid var(--primary-color); /* Linha inferior para destaque */
 }
 
 .header-secundario .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox para layout */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
 .logo-pequena {
     width: 250px; /* Logo menor no header secundário */
-    height: auto;
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Estilo do Botão de Voltar */
 .back-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;  /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+    color: var(--primary-color); /* Azul escuro */
+    padding: 8px 15px; /* Espaçamento interno */
+    border: 1px solid var(--primary-color); /*   Borda azul escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
 }
 
 .back-button:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); /* Azul escuro */
+    color: white; /* Texto branco ao passar o mouse */
 }
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 90px 0;
-    text-align: center;
+    padding: 90px 0;  /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o texto */
 }
 .marca-prado {
     width: auto;/* Ajuste conforme necessário */
@@ -69,48 +69,47 @@ html {
 }
 
 .marca-logo {
-    max-width: 250px;
-    margin-bottom: 10px;
+    max-width: 250px; /* Logo da marca menor */
+    margin-bottom: 10px; /* Espaçamento abaixo da logo */
    
 }
 
 .intro-marca {
-    max-width: 800px;
-    margin: 30px auto 30px;
-    font-size: 20px;
-    color: #555;
-    text-align: justify;
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    margin: 30px auto 30px; /* Centraliza e adiciona espaçamento */
+    font-size: 20px; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    text-align: justify; /* Justifica o texto */
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-bottom: 60px;
+    margin-bottom: 60px; /* Espaçamento abaixo das tags */
     
     
 }
 
 .tag-produto {
-    display: inline-block;
+    display: inline-block; /* Mantém as tags em linha */
     background-color: #002B49; /* Cor de fundo suave */
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
+    color: white; /* Cor do texto */
+    padding: 8px 15px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+    margin: 5px; /* Espaçamento entre as tags */
 }
 .observacao h3 {
-    background-color:#002B49;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 30px;
-    padding: 10px 10px;
-    max-width: 400px; 
-    margin: 20px auto; 
-    
-    border-radius: 10px;
-    font-style: normal;
-    text-align: center;
+    background-color:#002B49; /* Azul escuro */ 
+    font-size: 20px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    padding: 10px 10px; /* Espaçamento interno */
+    max-width: 400px; /* Limita a largura para melhor leitura */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-style: normal; /* Estilo normal */
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Layout da Lista de Produtos (Grid) */
@@ -132,51 +131,50 @@ html {
 }
 
 .produto-img {
-    max-width: 70%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    max-width: 70%; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 15px;/* Espaçamento abaixo da imagem */
 }
 
 .produto-item h4 {
-    font-size: 25px;
-    color: var(--dark-text);
-    margin-bottom: 5px;
+    font-size: 25px; /* Tamanho da fonte */
+    color: var(--dark-text); /* Cor do texto */
+    margin-bottom: 5px; /*  Espaçamento abaixo do título */
 }
 
 .produto-item p {
-    font-size: 18px;
-    color: #777;
-    text-align: justify;
-    font-weight: bolder;
-    padding: 10px 45px;
-    margin-bottom: 15px;
-    width: 80%;
+    font-size: 18px; /* Tamanho da fonte */
+    color: #777; /* Cor do texto */
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    font-weight: bolder;/* Negrito para destacar */
+    padding: 10px 45px; /* Espaçamento interno */
+    margin-bottom: 15px;/* Espaçamento abaixo do parágrafo */
 }
 .cta-button {
-    font-size:1.25rem;;
-    padding: 12px 25px;
-    background-color: #002B49;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 70px;
-    margin-bottom: 0;
-    text-decoration: none
+    font-size:1.25rem; /* Fonte maior para destacar */
+    padding: 12px 25px; /* Espaçamento interno maior */
+    background-color: #002B49;  /* Azul escuro */
+    color: white;   /* Texto branco */
+    border: none;   /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;    /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s;  /* Transição suave */
+    margin-top: 70px; /* Espaçamento acima do botão */
+    margin-bottom: 0;  /* Remove margem abaixo do botão */
+    text-decoration: none /* Remove underline do link */
     
 }   
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #002B49;
-    text-align: center;
-    margin: -5px;
-    padding: 1px 10px;       /* o mais fino possível sem sumir o conteúdo */
-    font-size: 1rem;
-    color: rgb(234, 224, 224);
+    display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: #002B49; /* Cor de fundo azul escuro */
+    text-align: center; /* Centraliza o texto */
+    margin: -5px; /* Remove margens externas */
+    padding: 1px 10px;  /* o mais fino possível sem sumir o conteúdo */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: rgb(234, 224, 224); /* Cor do texto */
     line-height: 1;          /* diminui altura do texto */
     min-height: unset;       /* evita altura fixa imposta por outros estilos */
 }

@@ -16,75 +16,75 @@
 
 /* Estilo do Header Secundário (apenas logo e botão de voltar) */
 .header-secundario {
-    background-color: var(--light-bg);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--light-bg);/* Cor de fundo clara */
+    padding: 15px 0;/* Espaçamento vertical */
+    border-bottom: 2px solid var(--primary-color);/* Linha inferior para destaque */
 }
 
 .header-secundario .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;/* Flexbox para layout */
+    justify-content: space-between;/* Espaço entre os itens */
+    align-items: center;/* Alinha verticalmente ao centro */
 }
 
 .logo-pequena {
     width: 250px; /* Logo menor no header secundário */
-    height: auto;
+    height: auto;/* Mantém a proporção da imagem */
 }
 
 /* Estilo do Botão de Voltar */
 .back-button {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    padding: 8px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;/* Tamanho da fonte */
+    font-weight: 600;/* Negrito */
+    color: var(--primary-color);/* Azul escuro */
+    padding: 8px 15px;/* Espaçamento interno */
+    border: 1px solid var(--primary-color);/*   Borda azul escuro */
+    border-radius: 5px;/* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s;/* Transições suaves */
 }
 
 .back-button:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color);/* Azul escuro */
+    color: white;/* Texto branco ao passar o mouse */
 }
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 20px 0 90px 0;
-    text-align: center;
+    padding: 20px 0 90px 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o texto */
 }
 
 .marca-logo {
-    max-width: 300px;
-    margin-bottom: 15px;
+    max-width: 300px; /* Logo da marca menor */   
+    margin-bottom: 15px; /* Espaçamento abaixo da logo */
 }
 
 .intro-marca {
-    max-width: 800px;
-    margin: 30px auto 20px auto;
-    font-size: 18px;
-    color: #555;
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    margin: 30px auto 20px auto;/* Centraliza e adiciona espaçamento */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #555;/* Cor do texto */
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-top: -80px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+    margin-top: -80px; /* Ajusta a posição para cima */
+    margin-bottom: 20px; /* Espaçamento abaixo das tags */
+    display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
+    justify-content: center; /* Centraliza as tags horizontalmente */
 }
 
 
 .tag-produto {
-    display: inline-block;
+    display: inline-block; /* Mantém as tags em linha */
     background-color: #002B49; /* Cor de fundo suave */
     color: white; /* Cor do texto */
-    padding: 10px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 5px;
-    margin-top: 80px;
+    padding: 10px 10px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+    margin: 5px; /* Espaçamento entre as tags */
+    margin-top: 80px; /* Espaçamento superior para afastar do conteúdo acima */
 }
 
 
@@ -104,35 +104,35 @@
 }
 
 .produto-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 100px;
-    margin-bottom: 15px;
+    max-width: 80%; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: 100px; /* Espaçamento superior para afastar do conteúdo acima */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
 }
 
 .produto-item h4 {
-    font-size: 25px;
-    color: var(--dark-text);
-    margin-bottom: 5px;
+    font-size: 25px; /* Tamanho da fonte */
+    color: var(--dark-text); /* Cor do texto */
+    margin-bottom: 5px; /*  Espaçamento abaixo do título */
 }
 
 .produto-item p {
-    font-size: 20px;
-    color: #777;
+    font-size: 20px; /* Tamanho da fonte */
+    color: #777; /* Cor do texto */
 }
 footer {
     display: flex;/* Ativa o layout flexível, colocando os itens lado a lado */
-    align-items: center;
-    justify-content: center;
-    background-color: #002B49;
-    text-align: center;
-    margin: -5px;
-    padding:-10px 5px;       /* o mais fino possível sem sumir o conteúdo */
-    font-size: 1rem;
-    color: rgb(234, 224, 224);
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    background-color: #002B49; /* Cor de fundo azul escuro */
+    text-align: center; /* Centraliza o texto */
+    margin: -5px; /* Remove margens externas */
+    padding:-10px 5px; /* o mais fino possível sem sumir o conteúdo */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: rgb(234, 224, 224); /* Cor do texto */
     line-height: 1;          /* diminui altura do texto */
-    min-height: unset;  
+    min-height: unset;          /* remove altura mínima */
  }
 
 /* Responsividade adicional para a nova página */
