@@ -1,14 +1,15 @@
-/* Centraliza o botão de solicitar tabela de preços */
+
 .tabela-preco-center {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-/* Reduz o tamanho do h2 apenas dentro do container */
+
 .container p {
     font-size: 1.45rem;
     font-weight: normal;
     text-align: justify;
+   
 }
 /* ====================================================================
    9. ESTILOS PARA PÁGINAS INDIVIDUAIS DE MARCA
@@ -16,123 +17,125 @@
 
 /* Estilo do Header Secundário (apenas logo e botão de voltar) */
 .header-secundario {
-    background-color: var(--light-bg);/* Cor de fundo clara */
-    padding: 15px 0;/* Espaçamento vertical */
-    border-bottom: 2px solid var(--primary-color);/* Linha inferior para destaque */
+    background-color: var(--light-bg);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .header-secundario .container {
-    display: flex;/* Flexbox para layout */
-    justify-content: space-between;/* Espaço entre os itens */
-    align-items: center;/* Alinha verticalmente ao centro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo-pequena {
-    width: 250px; /* Logo menor no header secundário */
-    height: auto;/* Mantém a proporção da imagem */
+    width: 250px; 
+    height: auto;
 }
 
 /* Estilo do Botão de Voltar */
 .back-button {
-    font-size: 16px;/* Tamanho da fonte */
-    font-weight: 600;/* Negrito */
-    color: var(--primary-color);/* Azul escuro */
-    padding: 8px 15px;/* Espaçamento interno */
-    border: 1px solid var(--primary-color);/*   Borda azul escuro */
-    border-radius: 5px;/* Bordas arredondadas */
-    transition: background-color 0.3s, color 0.3s;/* Transições suaves */
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius:  5px;
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 .back-button:hover {
-    background-color: var(--primary-color);/* Azul escuro */
-    color: white;/* Texto branco ao passar o mouse */
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* Estilo da Seção de Detalhes da Marca */
 .marca-detalhe {
-    padding: 20px 0 90px 0; /* Espaçamento superior e inferior */
-    text-align: center; /* Centraliza o texto */
+    padding: 20px 250px 90px 250px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
 }
 
 .marca-logo {
-    max-width: 300px; /* Logo da marca menor */   
-    margin-bottom: 15px; /* Espaçamento abaixo da logo */
+    max-width: 300px;   
+    margin-bottom: 15px; 
 }
 
 .intro-marca {
-    max-width: 800px; /* Limita a largura para melhor leitura */
-    margin: 30px auto 20px auto;/* Centraliza e adiciona espaçamento */
-    font-size: 18px; /* Tamanho da fonte */
-    color: #555;/* Cor do texto */
+    max-width: 800px; 
+    margin: 30px auto 20px auto;
+    font-size: 18px; 
+    color: #555;
 }
 
 /* Tags de Destaque do Produto */
 .destaques-linha {
-    margin-top: -80px; /* Ajusta a posição para cima */
-    margin-bottom: 20px; /* Espaçamento abaixo das tags */
-    display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
-    justify-content: center; /* Centraliza as tags horizontalmente */
+    margin-top: -80px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    justify-content: center; 
 }
 
 
 .tag-produto {
-    display: inline-block; /* Mantém as tags em linha */
-    background-color: #002B49; /* Cor de fundo suave */
-    color: white; /* Cor do texto */
-    padding: 10px 10px; /* Espaçamento interno */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-size: 14px; /* Tamanho da fonte */
-    font-weight: 600; /* Negrito */
-    margin: 5px; /* Espaçamento entre as tags */
-    margin-top: 80px; /* Espaçamento superior para afastar do conteúdo acima */
+    display: inline-block; 
+    background-color: #002B49; 
+    color: white; 
+    padding: 10px 10px; 
+    border-radius: 20px;
+    font-size: 14px; 
+    font-weight: 600; 
+    margin: 5px; 
+    margin-top: 80px; 
 }
 
 
 .produto-lista {
-  display: flex; /* Ativa o layout flexível, colocando os itens lado a lado */
-  flex-wrap: wrap; /* Permite que os itens que não cabem na linha passem para baixo */
-  gap: 20px; /* Cria um espaço de 20px entre os produtos (horizontal e vertical) */
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
 .produto-item {
-  /* Define que cada item deve tentar ocupar 32% da largura do container. */
-  /* Usamos 32% em vez de 33.33% para dar uma folga para o espaçamento. */
+  
   flex-basis: 32%; 
 
-  /* Garante que o padding e a borda não aumentem o tamanho total do item, evitando quebras de linha indesejadas */
+ 
   box-sizing: border-box; 
 }
 
 .produto-img {
-    max-width: 80%; /* Largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin-top: 100px; /* Espaçamento superior para afastar do conteúdo acima */
-    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    max-width: 80%; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-top: 100px; 
+    margin-bottom: 15px; 
 }
 
 .produto-item h4 {
-    font-size: 25px; /* Tamanho da fonte */
-    color: var(--dark-text); /* Cor do texto */
-    margin-bottom: 5px; /*  Espaçamento abaixo do título */
+    font-size: 25px; 
+    color: var(--dark-text); 
+    margin-bottom: 5px; 
 }
 
 .produto-item p {
-    font-size: 20px; /* Tamanho da fonte */
-    color: #777; /* Cor do texto */
+    font-size: 20px; 
+    color: #777; 
 }
 footer {
-    display: flex;/* Ativa o layout flexível, colocando os itens lado a lado */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    background-color: #002B49; /* Cor de fundo azul escuro */
-    text-align: center; /* Centraliza o texto */
-    margin: -5px; /* Remove margens externas */
-    padding:-10px 5px; /* o mais fino possível sem sumir o conteúdo */
-    font-size: 1rem; /* Tamanho da fonte */
-    color: rgb(234, 224, 224); /* Cor do texto */
-    line-height: 1;          /* diminui altura do texto */
-    min-height: unset;          /* remove altura mínima */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #002B49; 
+    text-align: center; 
+    margin: -5px; 
+    padding:-10px 5px;
+    font-size: 1rem; 
+    color: rgb(234, 224, 224); 
+    line-height: 1;          
+    min-height: unset;         
  }
 
 /* Responsividade adicional para a nova página */
